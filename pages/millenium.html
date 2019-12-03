@@ -8,6 +8,7 @@
 <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <script src="script.js"></script>    
 
   <style>
     body {margin: 0;}
@@ -96,4 +97,18 @@ tr:nth-child(even) {
     </script>
       
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.4789184825686!2d-87.62474008420999!3d41.88255637311368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2ca68a4f9c03%3A0x44182cdcb5a91004!2sMillennium%20Park!5e0!3m2!1sen!2sus!4v1575240936450!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      
+      <button type="button" id="weather_button">Check Weather</button>
+      
+       <script>
+      $.get("https://api.openweathermap.org/data/2.5/weather?q=Chicago&appid=953073fe4afcf7a90d20248a09c37985&units=imperial", 
+        function (data) {
+        $.each(data, function (i,v) {
+          $("body").append(v.temp);
+          // $("body").append("Annual Salary: " + v.annual_salary + "<br>");
+        });   // end of the callback function and parameter list for $.each
+      }); //  end of the callback function and parameter list for $.get
+
+</script>
+      
       

@@ -1,0 +1,8 @@
+{
+  "name": "Chicago's Attractions",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "white",
+  "description": "big project web app",
+  "related_applications": []
+}
