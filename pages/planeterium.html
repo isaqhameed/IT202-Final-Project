@@ -8,7 +8,7 @@
 <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <style>
     body {margin: 0;}
     :root {
@@ -97,5 +97,18 @@ tr:nth-child(even) {
       
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2971.2328238944974!2d-87.60897158421032!3d41.86633697412853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2b6fb7b114b5%3A0x6920a3aa12218ea6!2sAdler%20Planetarium!5e0!3m2!1sen!2sus!4v1575241926688!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
      
-      <center><h2>YELP REVIEWS</h2></center>
-      
+      <h2>YELP REVIEWS</h2>
+      <span class="yelp-review" data-review-id="DRZbdv5AIHxcL7E4utScMg" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=DAMaXEkcwYkQ5RWW-8dR_Q" rel="nofollow noopener">Kate M.</a>'s <a href="https://www.yelp.com/biz/halim-time-and-glass-museum-evanston?hrid=DRZbdv5AIHxcL7E4utScMg" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/xVlDtz_fJj2YQd3fu9mWcQ" rel="nofollow noopener">Halim Time & Glass Museum</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
+
+    <h2>Weather from OpenWeather API</h2>
+              <script>
+      $.get("https://api.openweathermap.org/data/2.5/weather?q=Chicago&appid=953073fe4afcf7a90d20248a09c37985&units=imperial", 
+        function (data) {
+        $.each(data, function (i,v) {
+          $("body").append(v.temp);
+          // $("body").append("Annual Salary: " + v.annual_salary + "<br>");
+        });   // end of the callback function and parameter list for $.each
+      }); //  end of the callback function and parameter list for $.get
+                  
+    </script>
+    

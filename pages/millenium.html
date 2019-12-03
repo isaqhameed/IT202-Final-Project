@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width">
     <title>BIG PROJECT</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
-  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-      <script src="script.js"></script>    
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="script.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
 
   <style>
     body {margin: 0;}
@@ -98,9 +99,12 @@ tr:nth-child(even) {
       
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2970.4789184825686!2d-87.62474008420999!3d41.88255637311368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2ca68a4f9c03%3A0x44182cdcb5a91004!2sMillennium%20Park!5e0!3m2!1sen!2sus!4v1575240936450!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
       
-      <button type="button" id="weather_button">Check Weather</button>
+      <h2>YELP REVIEW</h2>
       
-       <script>
+      <span class="yelp-review" data-review-id="xK0xrAHr_OII-PP1nmXejA" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=VU_T7adZ8NqqljpKyHc_wA" rel="nofollow noopener">Anna Z.</a>'s <a href="https://www.yelp.com/biz/millennium-park-chicago?hrid=xK0xrAHr_OII-PP1nmXejA" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/2DfcXGtDv7T_rnvl4lHzaQ" rel="nofollow noopener">Millennium Park</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
+     
+      <h2>Weather from OpenWeather API:</h2>
+        <script>
       $.get("https://api.openweathermap.org/data/2.5/weather?q=Chicago&appid=953073fe4afcf7a90d20248a09c37985&units=imperial", 
         function (data) {
         $.each(data, function (i,v) {
@@ -109,6 +113,4 @@ tr:nth-child(even) {
         });   // end of the callback function and parameter list for $.each
       }); //  end of the callback function and parameter list for $.get
 
-</script>
-      
-      
+    </script>

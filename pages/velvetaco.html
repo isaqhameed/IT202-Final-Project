@@ -8,6 +8,7 @@
 <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
   <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
 
   <style>
     body {margin: 0;}
@@ -97,6 +98,22 @@ tr:nth-child(even) {
       
    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2969.563485384527!2d-87.63069868420956!3d41.90224397188125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fd34e284a00b1%3A0xb7f1abf401b4ece!2sVelvet%20Taco!5e0!3m2!1sen!2sus!4v1575240872940!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>   
       
-      
+      <h2>YELP REVIEW</h2>
       <span class="yelp-review" data-review-id="t-VvbbbmJgxn1abdZe2dEQ" data-hostname="www.yelp.com">Read <a href="https://www.yelp.com/user_details?userid=Yz5fWrVZZIf2w7TFtnuz1Q" rel="nofollow noopener">Rini P.</a>'s <a href="https://www.yelp.com/biz/velvet-taco-chicago?hrid=t-VvbbbmJgxn1abdZe2dEQ" rel="nofollow noopener">review</a> of <a href="https://www.yelp.com/biz/NOKQi1saEWWp-cbUhkUtFQ" rel="nofollow noopener">Velvet Taco</a> on <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a><script async="async" src="https://www.yelp.com/embed/widgets.js" type="text/javascript"></script></span>
+      
+      <h2>Weather from OpenWeather API in F</h2>
+              <script>
+      $.get("https://api.openweathermap.org/data/2.5/weather?q=Chicago&appid=953073fe4afcf7a90d20248a09c37985&units=imperial", 
+        function (data) {
+        $.each(data, function (i,v) {
+            "temp:"
+          $("body").append(v.temp_max);
+         
+            
+          // $("body").append("Annual Salary: " + v.annual_salary + "<br>");
+        });   // end of the callback function and parameter list for $.each
+      }); //  end of the callback function and parameter list for $.get
+
+    </script>
+    
       
